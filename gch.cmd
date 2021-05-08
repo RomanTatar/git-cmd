@@ -1,2 +1,3 @@
 @echo off
-CALL git.cmd checkout %*
+git.exe checkout %*
+CALL gprompt.cmd
