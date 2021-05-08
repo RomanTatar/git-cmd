@@ -18,7 +18,7 @@ IF %GitError% EQU 0 (
     ) ELSE (
         rem GitBranch is NOT defined - This is Git repository without branch
         rem Get last commit hash and set prompt for Git repository with commit
-        FOR /F %%I IN ('gl1.cmd -1 --format^=%%h') DO set GitCommit=%%I
+        FOR /F %%I IN ('git.exe rev-parse --short HEAD') DO set GitCommit=%%I
         prompt $E[1;37m$P $E[31m[!GitCommit!]$E[37m $G$E[0;37m
     )
 ) ELSE (
