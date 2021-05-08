@@ -1,2 +1,2 @@
 @echo off
-git.exe --no-pager log --oneline --color=always | less -FRSXM
+git.exe --no-pager log --oneline --color | less -FRSXM
