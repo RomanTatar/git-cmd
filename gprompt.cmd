@@ -26,5 +26,9 @@ IF %GitError% EQU 0 (
     prompt
 )
 rem Return prompt outside local environment (EnableDelayedExpansion is required for variables enumeration)
-ENDLOCAL & prompt %PROMPT%
+ENDLOCAL & (
+    prompt %PROMPT%
+    set GitBranch=%GitBranch%
+    set GitCommit=%GitCommit%
+    )
 EXIT /B %GitError%
