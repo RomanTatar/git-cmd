@@ -2,7 +2,9 @@
 git.exe %*
 set GitError=%ErrorLevel%
 set GitBranch=
-FOR /F %%I IN ('git.exe branch --show-current 2^>NUL') DO set GitBranch=%%I
+IF %GitError% EQU 0 (
+    FOR /F %%I IN ('git.exe branch --show-current') DO set GitBranch=%%I
+)
 
 IF "%GitBranch%" == "" (
     prompt
