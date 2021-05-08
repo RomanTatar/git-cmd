@@ -1,2 +1,2 @@
 @echo off
-CALL git.cmd add %*
+git.exe add %*

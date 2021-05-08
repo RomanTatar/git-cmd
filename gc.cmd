@@ -1,2 +1,2 @@
 @echo off
-CALL git.cmd commit -m "%*"
+git.exe commit -m "%*"

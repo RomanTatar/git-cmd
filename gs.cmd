@@ -1,2 +1,3 @@
 @echo off
-CALL git.cmd status
+git.exe status
+CALL gprompt.cmd

@@ -1,5 +1,5 @@
 @echo off
-CALL git.cmd add --all
+git.exe add --all
 IF %ErrorLevel% EQU 0 (
-    CALL git.cmd status
+    git.exe status
 )
