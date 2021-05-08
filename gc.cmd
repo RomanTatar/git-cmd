@@ -1,2 +1,2 @@
 @echo off
-git.exe commit -m "%*"
+git.exe commit --message="%*"
